@@ -1,9 +1,10 @@
 // Create an express app
 
 const express = require('express');
+const userRouter = require('./routes/userRoutes');
 const app = express();
-app.get('/', (req, res) => {
-    res.send ('Hello Jo... You are bold enough to handle all the situations')
-})
+
+// use is used to add the middleware, it will be used according to the order
+app.use('/api/v1', userRouter);
 
 module.exports = app;

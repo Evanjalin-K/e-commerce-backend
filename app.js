@@ -24,7 +24,7 @@ app.use(express.json());
 app.use(requestLogger);
 
 // use is used to add the middleware, it will be used according to the order
-app.use('/api/v1', userRouter);
+app.use('/api/v1/users', userRouter);
 
 app.use(unknownEndpoint);
 

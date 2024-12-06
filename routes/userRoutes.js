@@ -11,6 +11,10 @@ userRouter.post('/register', userController.register);
 userRouter.post('/login', userController.login);
 userRouter.get('/logout', userController.logout);
 userRouter.get('/profile', auth.verifyToken, userController.getProfile);
+userRouter.put('/update', auth.verifyToken, userController.updateProfile);
+userRouter.delete('/delete', auth.verifyToken, userController.deleteProfile);
+
+
 
 
 
